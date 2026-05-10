@@ -11,9 +11,9 @@ try:
     api.repo_info(repo_id=repo_id, repo_type=repo_type)
     print(f"Space '{repo_id}' found.")
 except RepositoryNotFoundError:
-    print(f"Space '{repo_id}' not found. Creating it now...")
-    # 'sdk' is set to 'streamlit' as per your app.py logic
-    create_repo(repo_id=repo_id, repo_type=repo_type, space_sdk="streamlit", private=False)
+    print(f"Space '{repo_id}' not found. Creating it as a Docker Space...")
+    # Changed space_sdk to "docker" to avoid the "streamlit" invalid option error
+    create_repo(repo_id=repo_id, repo_type=repo_type, space_sdk="docker", private=False)
     print(f"Space '{repo_id}' created successfully.")
 
 # Step 2: Upload the deployment folder
