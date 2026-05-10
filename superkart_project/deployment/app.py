@@ -5,7 +5,12 @@ import joblib
 
 
 # Download the model from the Model Hub
-model_path = hf_hub_download(repo_id="cjigar/superkart-package-model", filename="best_superkart_package_model_v1.joblib")
+#model_path = hf_hub_download(repo_id="cjigar/superkart-package-model", filename="best_superkart_package_model_v1.joblib")
+
+model_path = hf_hub_download(
+    repo_id="cjigar/superkart-package-model", 
+    filename="superkart_sales_model.joblib" 
+)
 
 # Load the model
 model = joblib.load(model_path)
