@@ -106,8 +106,14 @@ with mlflow.start_run():
 
     # create_repo("churn-model", repo_type="model", private=False)
     api.upload_file(
-        path_or_fileobj="best_superkart_package_model_v1.joblib",
-        path_in_repo="best_superkart_package_model_v1.joblib",
+        path_or_fileobj=model_filename, # Changed from the hardcoded "best_superkart..."
+        path_in_repo=model_filename,    # Changed from the hardcoded "best_superkart..."
         repo_id=repo_id,
         repo_type=repo_type,
     )
+    # api.upload_file(
+    #     path_or_fileobj="best_superkart_package_model_v1.joblib",
+    #     path_in_repo="best_superkart_package_model_v1.joblib",
+    #     repo_id=repo_id,
+    #     repo_type=repo_type,
+    # )
