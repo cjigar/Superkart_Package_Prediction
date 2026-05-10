@@ -62,7 +62,7 @@ input_dict = {
     'Store_Type': Store_Type
 }
 
-input_data = pd.DataFrame([input_dict])
+input_df = pd.DataFrame([input_dict])
 
 # Prediction Logic
 if st.button("Predict Total Sales"):
